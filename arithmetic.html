@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>arithmetic.html</title>
+ </head>
+<body>
+
+<h2>computes by Saivivek_Reddy_Kusukuntla</h2>
+
+<form>
+   
+        <p>Enter a number: </p>
+        <input type="number" id="first_num" class="form-control"
+          value="10" placeholder="Enter a base">
+     
+        <p>Enter power:</p>
+        <input type="number" class="form-control" id="Second_num"
+          value="2" placeholder="Enter an exponent">
+     
+        <input type="button" class="btn btn-success btn-md"
+          onclick="powers()" value="Compute">
+     
+       
+</form>
+<p class="text-warning" id="result">This text will be replaced</p>
+<hr>
+<button onclick="location.reload();">Hit here! for clear Results</button>
+
+<script> 
+
+let result = " ";
+
+
+function powers ()
+{
+    base = document.getElementById("first_num").value
+    exponent = document.getElementById("Second_num").value
+    
+    for(let i = 1; i <= exponent; i++)
+    {
+        result += (base ** i) + " ";
+        
+    }
+    document.getElementById("result").innerHTML = "Powers of " + base + " are: " + result;
+
+}
+
+
+
+</script>
+
+</body>
+</html> 
+
