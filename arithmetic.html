@@ -2,55 +2,73 @@
 <html>
  <head>
      <title>arithmetic.html</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
-<body>
+<body style="background-color: rgb(252, 236, 217);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12">
 
-<h2>computes by Saivivek_Reddy_Kusukuntla</h2>
+                    <form class="form">
+ 
+                        <h2>computes by Saivivek_Reddy_Kusukuntla</h2>
+                        <div class="form-group">
+                    <label for="first_num" class="label">Enter a number </label>
+                         <input type="number" id="first_num" class="form-control"
+                    value="10" placeholder="Enter a base">
+                    </div>
+                    <div class="form-group">
+                    <label for="Second_num" class="label">Enter Power </label>
+                    <input type="number" class="form-control" id="Second_num"
+                    value="2" placeholder="Enter an exponent">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success btn-md"
+                            onclick="powers()" value="Compute">
+                        </div>
+                        <p class="text-warning" id="result">This text will be replaced</p>
 
-<form>
-   
-        <p>Enter a number: </p>
-        <input type="number" id="first_num" class="form-control"
-          value="10" placeholder="Enter a base">
-     
-        <p>Enter power:</p>
-        <input type="number" class="form-control" id="Second_num"
-          value="2" placeholder="Enter an exponent">
-     
-        <input type="button" class="btn btn-success btn-md"
-          onclick="powers()" value="Compute">
-     
-          <p class="text-warning" id="result">This text will be replaced</p>
+                    </form>
+                    <button onclick="location.reload();">Hit here! for clear Results</button>
+                    <hr>
+                        <form>
+                        <input type="radio" id="plus" name="operation" onclick="processRadio()" value="plus"> 
+                    <label for="plus">+</label>
+                        </br>
+                        <input type="radio" id="minus" name="operation" onclick="processRadio()" value="minus">
+                        <label for="minus">-</label>
+                        </br>
+                        <input type="radio" id="times" name="operation" onclick="processRadio()" value="times">
+                        <label for="times">*</label>
+                        </br>
+                        <input type="radio" id="divide" name="operation" onclick="processRadio()" value="divide">
+                        <label for="divide">/</label>
+                        </br>   
+                        </form>
 
-</form>
-<button onclick="location.reload();">Hit here! for clear Results</button>
-<hr>
-<form>
-    <input type="radio" id="plus" name="operation" onclick="processRadio()" value="plus"> 
-    <label for="plus">+</label>
-    </br>
-    <input type="radio" id="minus" name="operation" onclick="processRadio()" value="minus">
-    <label for="minus">-</label>
-    </br>
-    <input type="radio" id="times" name="operation" onclick="processRadio()" value="times">
-    <label for="times">*</label>
-    </br>
-    <input type="radio" id="divide" name="operation" onclick="processRadio()" value="divide">
-    <label for="divide">/</label>
-    </br>   
-    </form>
+                            <p id="answer" class="text-info">The text</p>
 
-    <p id="answer" class="text-info">The text</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-<script> 
 
-let result = " ";
-function powers() {
+        <script> 
 
-base = document.getElementById("first_num").value
-exponent = document.getElementById("Second_num").value
+  let result = " ";
+  function powers() {
+
+  base = document.getElementById("first_num").value
+  exponent = document.getElementById("Second_num").value
 
    var result = "Powers of " + base + " are: "
    r = 1
@@ -61,9 +79,9 @@ exponent = document.getElementById("Second_num").value
        result+= r+ " "
    }
    out.innerHTML = result
-}
+  }
 
-function processRadio() {
+  function processRadio() {
     base = document.getElementById("first_num").value
     exponent = document.getElementById("Second_num").value
             plus = document.getElementById("plus").checked
@@ -93,7 +111,7 @@ function processRadio() {
             }
         }
 
-</script>
+  </script>
 
 </body>
 </html> 
