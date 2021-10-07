@@ -10,13 +10,26 @@
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
 <body style="background-color: rgb(252, 236, 217);">
+    <div class="container">
+    <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark and bg-secondary">
+        <a class="navbar-brand" href="arithmetic.html" target="_self">arithmetic page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="pass.html" target="_self">pass</a></li>
+                <li class="nav-item active"> <a class="nav-link" href="car.html" target="_self">car</a></li>
+      </nav>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-12">
 
                     <form class="form">
- 
+                        <h1 class="display-4">Hey You are in arithmetic.html page</h1><hr>
                         <h2>computes by Saivivek_Reddy_Kusukuntla</h2>
                         <div class="form-group">
                     <label for="first_num" class="label">Enter a number </label>
@@ -35,7 +48,7 @@
                         <p class="text-warning" id="result">This text will be replaced</p>
 
                     </form>
-                    <button onclick="location.reload();">Hit here! for clear Results</button>
+                    <button onclick="location.reload();"><span class="spinner-grow spinner-grow-sm"></span>Hit here! for clear Results</button>
                     <hr>
                         <form>
                         <input type="radio" id="plus" name="operation" onclick="processRadio()" value="plus"> 
@@ -52,7 +65,7 @@
                         </br>   
                         </form>
 
-                            <p id="answer" class="text-info">The text</p>
+                            <p id="answer" class="text-info">The text will display here</p>
 
                 </div>
             </div>
@@ -60,7 +73,7 @@
     </div>
 
 
-
+</div>
 
         <script> 
 
